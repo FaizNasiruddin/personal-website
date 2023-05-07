@@ -1,0 +1,213 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    color:white;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    text-decoration: none;
+    background-image:linear-gradient(
+        to bottom right, 
+        rgba(0,51,77,0.9),
+        rgba(0,34,51,0.9)),
+        url(media/keyboard-mouse.jpg);
+    background-size: cover;
+    background-position: center;
+
+   
+}
+
+/*navbar*/
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar img{
+    width: 180px;
+    height: 100px;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar li{
+    margin: 40px 20px;
+    padding:5px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.content{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+    width: 400px;
+    font-weight: 900;
+}
+
+.content img{
+    width: 110px;
+    border-radius: 50%;
+    border: solid;
+    border-width: 3px;
+    margin: 10px;
+}
+
+.content h2{
+    padding:10px;
+    border-bottom: solid;
+}
+
+.content p{
+    padding:10px;
+}
+
+.profile {
+    visibility: hidden;
+    transform: translate(-50%,-50%);
+    position:absolute;
+    left:50%;
+    top:50%;
+    text-align: center;
+
+}
+
+.profile h2{
+    margin: 20px;
+}
+
+
+.resume{
+    visibility: hidden;
+}
+
+.resume div{
+    margin: 20px;
+}
+
+.resume main{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top:50%;
+}
+
+.resume section{
+   
+
+    width: 250px;
+    height: 200px;
+}
+
+.resume .image1{
+    background-image:linear-gradient(
+        to bottom right, 
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.1)), url(media/resume.jpg);
+    background-image: rgba(0, 0, 0, 1); 
+    background-size: cover;
+    background-position: top;
+}
+
+
+.resume p{
+    padding: 10px;
+    font-weight:bold;
+    color: rgba(0,51,77,0.9);
+}
+
+.resume button {
+    background: rgba(0,34,51,0.9);
+    color: white;
+    border: none;
+    width:100px;
+    margin:10px;
+    padding:5px;
+
+}
+
+.resume nav{
+    background-color: white;
+}
+
+.resume a{
+    color: white;
+    text-decoration: none;
+}
+
+.certificate{
+    visibility: hidden;
+}
+
+.certificate div{
+    margin: 20px;
+}
+
+.certificate main{
+    display: flex;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top:50%;
+}
+
+.certificate section{
+    background: red;
+    width: 250px;
+    height: 200px;
+}
+
+.certificate .image1{
+    background-image: url(media/certificate.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.certificate .image2{
+    background-image: url(media/transcript.jpg);
+    background-size: cover;
+    background-position: top;
+}
+
+.certificate p{
+    padding: 10px;
+    font-weight:bold;
+    color: rgba(0,51,77,0.9);
+}
+
+.certificate button {
+    background: rgba(0,34,51,0.9);
+    color: white;
+    border: none;
+    width:100px;
+    margin:10px;
+    padding:5px;
+
+}
+
+.certificate nav{
+    background-color: white;
+}
+.certificate a{
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+    .navbar img{
+        visibility: hidden;
+    }
+}
