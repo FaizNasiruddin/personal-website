@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Single:slnt,wght@-3,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* .bitcount-single-<uniquifier> {
+  font-family: "Bitcount Single", system-ui;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" -3,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+} */
+
+/* .playwrite-hu-<uniquifier> {
+  font-family: "Playwrite HU", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/* .inter-<uniquifier> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+:root {
+  --background-color: rgb(255, 255, 255);
+  --main-color: #00345f;
+  --second-color: rgb(255, 170, 0);
+  --third-color: color-mix(in srgb, var(--main-color) 30%, white);
+
+  --font-size-title: 2rem;       /* For big page titles */
+  --font-size-subtitle: 1.75rem;   /* For smaller section titles */
+  --font-size-text: 1rem;          /* For normal body text */
+  --font-size-small: 0.875rem;     /* For small details */
+  --font-size-navbar: 1.1rem;    /* Slightly larger than normal text */
+}
+
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  background-color: var(--background-color);
+ font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.backgroundbox{
+  background-color: var(--main-color);
+  width: 30%;
+  height: 100vh;
+}
+
+.navbar {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 60px;
+  color: var(--text-color);
+  z-index: 1000;
+  height: 80px;
+}
+
+.navbar__menu{
+  display: flex;
+  justify-content: space-between;
+  width: 30rem;
+  font-size: var(--font-size-navbar);
+  color: var(--main-color);
+  font-weight: 500;
+}
+
+.navbar__menu a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.profile{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile__card{
+  height: 300px;
+  width: 70%;
+  position: relative;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: absolute;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+  margin-bottom: 20px;
+}
+
+.profile__picture{
+  position: relative;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-left: 70px;
+  align-self: end;
+  display: flex;
+}
+
+.profile__picture img{
+  width: 100%;
+  aspect-ratio: 1/1;
+  /* border: solid 1px var(--main-color); */
+}
+
+.circle__1{
+  background-color: rgb(200, 200, 200);
+  height: 200px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+}
+
+.circle__2{
+  background-color: rgb(200, 200, 200);
+  height: 250px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  z-index: -1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.profile__description{
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  grid-column: span 2;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.profile__description button{
+  background-color: var(--second-color);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+}
+
+
+.profile__description h1{
+  font-size: var(--font-size-title);
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+.profile__description p{
+  font-size: var(--font-size-text);
+  color: black;
+  font-weight: 300;
+}
+
+.profile__link{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 ;
+}
+
+.profile__link svg{
+  margin: 15px;
+  color: rgb(103, 103, 103);
+  font-size: 26px; 
+}
+
+.profile__skill{
+  background-color: #4e4e4e;
+  color: aliceblue;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 40px 90px;
+}
+
+.profile__skill div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.profile__skill ul{
+}
+
+.profile__skill li{
+  text-decoration: none;
+  list-style: none;
+  padding: 10px 0px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.profile__skill li svg{
+  font-size: 30px;
+}
+
+
+/* .profile__skill svg{
+  font-size: 30px;
+} */
+
+.profile__tools{
+  background-color: #4e4e4e;
+  color: aliceblue;
+  padding: 40px 90px;
+  text-align: center;
+  position: relative;
+}
+
+.profile__tools div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.profile__tools li{
+  text-decoration: none;
+  list-style: none;
+  padding: 10px 0px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.profile__tools li svg{
+  font-size: 30px;
+}
+
+/* .profile__tools svg{
+  font-size: 25px;
+} */
+
+.devider__1{
+  background-color: white;
+  width: 3px;
+  border-radius: 20px;
+  height: 70%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.devider__2{
+  background-color: white;
+  width: 3px;
+  border-radius: 20px;
+  height: 70%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(50%,-50%);
+}
+
+.profile__experience{
+  background-color: #4e4e4e;
+  color: aliceblue;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 40px;
+  text-align: center;
+}
+
+.profile__experience div{
+display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.profile__experience svg{
+  font-size: 30px;
+}
+
+.certificatelist table{
+  width: 60%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  border-collapse: collapse;
+  border: none;
+}
+
+
+.certificatelist tr{
+  border-bottom: solid white 8px;
+  border-radius: 20px;
+}
+
+.certificatelist td,th{
+  padding: 10px;
+  text-align: left;
+}
+
+.certificatelist button{
+  padding: 10px 50px;
+}
+
+.portfoliogrid{
+  width: 60%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 50vh;
+  gap: 10px;
+}
+
+.portfoliogrid div{
+  background-color: burlywood;
+}
