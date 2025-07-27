@@ -81,9 +81,16 @@ body{
   font-weight: 500;
 }
 
+.navbar__menu a:hover{
+  border-bottom: solid 3px;
+}
+
 .navbar__menu a{
   text-decoration: none;
   color: inherit;
+  padding-bottom: 10px;
+  border-radius: 2px;
+
 }
 
 .profile{
@@ -97,7 +104,7 @@ body{
   height: 300px;
   width: 70%;
   position: relative;
-  border-radius: 10px;
+  border-radius: 4px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   position: absolute;
@@ -107,8 +114,6 @@ body{
 
 .profile__picture{
   position: relative;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
   padding-left: 70px;
   align-self: end;
   display: flex;
@@ -142,8 +147,6 @@ body{
 }
 
 .profile__description{
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
   grid-column: span 2;
   padding-left: 70px;
   padding-right: 70px;
@@ -154,6 +157,11 @@ body{
   border: none;
   padding: 15px 30px;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.profile__description button:hover{
+  filter: brightness(0.9);
 }
 
 
@@ -166,7 +174,12 @@ body{
 .profile__description p{
   font-size: var(--font-size-text);
   color: black;
-  font-weight: 300;
+  font-weight: 400;
+}
+
+.highlight{
+  color: var(--second-color);
+  font-weight: 500;
 }
 
 .profile__link{
@@ -182,11 +195,16 @@ body{
   font-size: 26px; 
 }
 
+.profile__link svg:hover{
+  transform: scale(1.2);
+  
+}
+
 .profile__skill{
   background-color: #4e4e4e;
   color: aliceblue;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
   padding: 40px 90px;
 }
 
@@ -279,8 +297,8 @@ body{
 .profile__experience{
   background-color: #4e4e4e;
   color: aliceblue;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
     padding: 40px 90px;
 }
 
@@ -346,4 +364,67 @@ display: flex;
 
 .portfoliogrid div{
   background-color: burlywood;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.portfoliogrid div:hover{
+  transform: scale(1.025);
+}
+
+
+
+@media screen and (max-width: 1400px) {
+  .profile__description{
+    padding-right: 10px;
+  }
+
+  .profile__picture{
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+
+
+  .navbar__menu{
+
+  }
+  .profile__card{
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .profile__description{
+    grid-column: span 1;
+    padding: 0px;
+  }
+
+  .profile__picture{
+    display: flex;
+    justify-content: center;
+    padding-left: 0px;
+  }
+
+  .profile__picture img{
+    width: 200px;
+    text-align: center;
+  }
+
+  .profile__skill{
+    border-radius: 20px;
+    padding: 30px;
+  }
+
+
+  .profile__tools{
+    border-radius: 20px;
+    padding: 30px;
+  }
+
+  .profile__experience{
+    border-radius: 20px;
+    padding: 30px;
+  }
 }

@@ -4,19 +4,31 @@ function PortfolioGrid() {
   return (
     <div className="portfoliogrid">
        <div>
-        asdasd
+        <h2>Laravel + MySQL</h2>
+        Learning Management System (LMS) for Tuition Centre 
        </div>
        <div>
-        asdasd
+        {/* <h2>React + Sass + Firebase</h2> */}
+        <h2>React</h2>
+        Personal Website 
        </div>
        <div>
-        asdasd
+        <h2>Android Studio + Java</h2>
        </div>
        <div>
-        asdasd
+        Vue js Project Coming soon
        </div>
        <div>
-        asdasd
+        coming soon
+       </div>
+       <div>
+        coming soon
+       </div>
+       <div>
+        coming soon
+       </div>
+       <div>
+        coming soon
     </div>
     </div>
   );

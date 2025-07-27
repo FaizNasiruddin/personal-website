@@ -24,7 +24,7 @@ function Profile() {
       const message = messages[messageIndex];
       
       for (let i = 0; i <= message.length; i++) {
-        await new Promise(resolve => setTimeout(resolve, 100));
+        await new Promise(resolve => setTimeout(resolve, 40));
         if (isMounted) {
           setText(message.slice(0, i));
         }
@@ -56,18 +56,23 @@ function Profile() {
 
           <div className="profile__description">
             <div>
-              <h1 style={{height: "30px"}}>{text}</h1>
+              <h1 style={{minHeight: "80px"}}>{text}</h1>
               <br />
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+              <p>I am a Bachelor of Computer Science student seeking an internship opportunity as a web or application developer. 
+                I'm flexible with programming languages, frameworks, and tools.
+                 I will try my best to follow the job flow and complete the tasks given responsibly while learning along the way.
+                 I am available to start my internship from <span className='highlight'>10 August 2025</span>, and I am able to commit for a duration of <span className='highlight'>3-6 months.</span></p>
               <br />
-              <button>Download CV</button>
+              <a href="/resume.pdf" download>
+                <button>Download Resume</button>
+              </a>
               <br />
               <br />
               <div className="profile__link">
-                <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/FaizNasiruddin" target="_blank" rel="noopener noreferrer">
                   <FaGithub />
                 </a>
-                <a href="https://wa.me/60123456789" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/60176575292" target="_blank" rel="noopener noreferrer">
                   <FaWhatsapp />
                 </a>
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
