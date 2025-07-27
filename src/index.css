@@ -75,7 +75,7 @@ body{
 .navbar__menu{
   display: flex;
   justify-content: space-between;
-  width: 30rem;
+  width: 20rem;
   font-size: var(--font-size-navbar);
   color: var(--main-color);
   font-weight: 500;
@@ -281,8 +281,7 @@ body{
   color: aliceblue;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  padding: 40px;
-  text-align: center;
+    padding: 40px 90px;
 }
 
 .profile__experience div{
@@ -291,7 +290,17 @@ display: flex;
   align-items: center;
   font-size: 20px;
   font-weight: 600;
+  padding-bottom: 40px;
+
 }
+
+.profile__experience li{
+  padding: 10px 0px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
 
 .profile__experience svg{
   font-size: 30px;

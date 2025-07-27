@@ -4,8 +4,46 @@ import { BsFiletypeXml } from "react-icons/bs";
 import { BiLogoVisualStudio } from "react-icons/bi";
 import { SiXampp, SiPostman, SiAndroidstudio } from "react-icons/si";
 import { DiVisualstudio } from "react-icons/di";
+import React, { useState, useEffect } from 'react';
+
 
 function Profile() {
+  const messages = [
+    "I want to apply as intern",
+    "I'm passionate about frontend development",
+    "Thank you for visiting my site"
+  ];
+
+  const [text, setText] = useState("");
+  const [messageIndex, setMessageIndex] = useState(0);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const typeMessage = async () => {
+      const message = messages[messageIndex];
+      
+      for (let i = 0; i <= message.length; i++) {
+        await new Promise(resolve => setTimeout(resolve, 100));
+        if (isMounted) {
+          setText(message.slice(0, i));
+        }
+      }
+
+      // Wait before showing the next message
+      await new Promise(resolve => setTimeout(resolve, 1500));
+
+      if (isMounted) {
+        setMessageIndex((prevIndex) => (prevIndex + 1) % messages.length);
+      }
+    };
+
+    typeMessage();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [messageIndex]);
   return (
     <>
       <div className="profile">
@@ -18,7 +56,7 @@ function Profile() {
 
           <div className="profile__description">
             <div>
-              <h1>Hello, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Au.</h1>
+              <h1 style={{height: "30px"}}>{text}</h1>
               <br />
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
               <br />
@@ -68,7 +106,7 @@ function Profile() {
                 Tools
             </div>
             <ul>
-            <li><BiLogoVisualStudio /> &nbsp; Visual Studio</li>
+            <li><BiLogoVisualStudio /> &nbsp; Visual Studio Code</li>
             <li><DiVisualstudio /> &nbsp; Visual Studio</li>
             <li><SiXampp /> &nbsp; XAMPP</li>
             <li><SiPostman /> &nbsp; Postman</li>
@@ -80,7 +118,11 @@ function Profile() {
             <div>
               {/* <FaGraduationCap/> &nbsp; */}
               Education
-            </div>            
+            </div>
+            <ul>
+              <li>Diploma in Computer Science (UNISEL)</li>
+              <li>Bachelor in Computer Science (UNISEL)</li>
+            </ul>        
           </div>
         </div>
       </div>
