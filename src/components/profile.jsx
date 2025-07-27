@@ -9,9 +9,9 @@ import React, { useState, useEffect } from 'react';
 
 function Profile() {
   const messages = [
-    "I want to apply as intern",
-    "I'm passionate about frontend development",
-    "Thank you for visiting my site"
+    "Hello, I would like to apply for an internship as an IT developer.",
+    "I'm passionate about both frontend and backend development.",
+    "Thank you for visiting my website."
   ];
 
   const [text, setText] = useState("");
