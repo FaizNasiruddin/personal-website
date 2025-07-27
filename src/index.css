@@ -38,7 +38,7 @@
   --font-size-subtitle: 1.75rem;   /* For smaller section titles */
   --font-size-text: 1rem;          /* For normal body text */
   --font-size-small: 0.875rem;     /* For small details */
-  --font-size-navbar: 1.1rem;    /* Slightly larger than normal text */
+  --font-size-navbar: 1rem;
 }
 
 
@@ -204,8 +204,6 @@ body{
 .profile__skill{
   background-color: #4e4e4e;
   color: aliceblue;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
   padding: 40px 90px;
 }
 
@@ -245,6 +243,8 @@ body{
   padding: 40px 90px;
   text-align: center;
   position: relative;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .profile__tools div{
@@ -298,8 +298,8 @@ body{
 .profile__experience{
   background-color: #4e4e4e;
   color: aliceblue;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
     padding: 40px 90px;
 }
 
@@ -389,7 +389,7 @@ display: flex;
 
 
   .navbar__menu{
-
+    width: 250px;
   }
   .profile__card{
     grid-template-columns: 1fr;
@@ -403,12 +403,13 @@ display: flex;
     background-color: rgb(255, 255, 255);
     border-radius: 8px;
     padding: 20px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
     margin-bottom: 20px;
   }
 
   .profile__description h1{
     font-size: 25px;
+    height: 30px;
   }
 
   .profile__picture{
