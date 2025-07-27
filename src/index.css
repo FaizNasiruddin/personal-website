@@ -401,10 +401,19 @@ display: flex;
     padding: 0px;
   }
 
+  .profile__description h1{
+    font-size: 25px;
+    color: red;
+  }
+
   .profile__picture{
     display: flex;
     justify-content: center;
     padding-left: 0px;
+  }
+
+  .profile__link{
+    justify-content: center;
   }
 
   .profile__picture img{
