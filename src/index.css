@@ -110,7 +110,6 @@ body{
   grid-template-columns: 1fr 1fr 1fr;
   position: absolute;
   /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
-  margin-bottom: 20px;
 }
 
 .profile__picture{
@@ -177,7 +176,7 @@ body{
   color: black;
   font-weight: 400;
   line-height: 25px;
-  text-align: justify;
+  text-align: justifyg;
 }
 
 .highlight{
@@ -350,6 +349,14 @@ display: flex;
 
 .certificatelist button{
   padding: 10px 50px;
+  border: none;
+  background-color: var(--second-color);
+  /* color: white; */
+  border-radius: 4px;
+}
+
+.certificatelist button:hover{
+  filter: brightness(0.8);
 }
 
 .portfoliogrid{
@@ -365,10 +372,16 @@ display: flex;
   gap: 10px;
 }
 
+.portfoliogrid a{
+  text-decoration: none;
+}
+
 .portfoliogrid div{
-  background-color: burlywood;
+  background-color: rgb(199, 199, 199);
   padding: 20px;
   border-radius: 4px;
+  height: 100%;
+  color: white;
 }
 
 .portfoliogrid div:hover{
@@ -472,4 +485,13 @@ display: flex;
   .circle__2{
     display: none;
   }
+
+  
+
+  .portfoliogrid{
+    width: 80%
+    
+    ;
+  }
+
 }

@@ -5,6 +5,8 @@ import { BiLogoVisualStudio } from "react-icons/bi";
 import { SiXampp, SiPostman, SiAndroidstudio } from "react-icons/si";
 import { DiVisualstudio } from "react-icons/di";
 import React, { useState, useEffect } from 'react';
+import { MdEmail } from "react-icons/md";
+
 
 
 function Profile() {
@@ -70,7 +72,7 @@ useEffect(() => {
 </p>
 
               <br />
-              <a href="/resume.pdf" download>
+              <a href="documents/Muhammad Faiz.pdf" download>
                 <button>Download Resume</button>
               </a>
               <br />
@@ -80,14 +82,16 @@ useEffect(() => {
                   <FaGithub />
                 </a>
                 <a href="https://wa.me/60176575292" target="_blank" rel="noopener noreferrer">
-                  <FaWhatsapp />
-                </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                  <FaInstagram />
-                </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                  <FaLinkedin />
-                </a>
+                 <FaWhatsapp />
+                </a> 
+   <a 
+  href="https://mail.google.com/mail/?view=cm&to=faiznasiruddin8@gmail.com&su=Hello%20Faiz&body=I%20wanted%20to%20reach%20out%20to%20you%20about..."
+  target="_blank" 
+  rel="noopener noreferrer"
+>
+  <MdEmail />
+</a>
+
               </div>
             </div>
           </div>
@@ -134,7 +138,9 @@ useEffect(() => {
             <li><SiAndroidstudio /> &nbsp; Android Studio</li>
           </ul>
           </div>
-         
+          <div style={{height: '200px'}}>
+
+          </div>
         </div>
       </div>
     </>

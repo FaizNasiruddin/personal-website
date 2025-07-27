@@ -12,28 +12,39 @@ function CertificateTable(){
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>React Basics</td>
-                        <td><button>View</button></td>
+                        <td>Degree Dean List Certificate 1</td>
+                        <td>
+                            <a href="/documents/dean.pdf" target="_blank" rel="noopener noreferrer">
+                                <button>View</button>
+                            </a>
+                        </td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>Advanced CSS</td>
-                        <td><button>View</button></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>JavaScript Mastery</td>
-                        <td><button>View</button></td>
+                        <td>Degree Dean List Certificate 2</td>
+                        <td>
+                            <a href="/documents/dean list 1.pdf" target="_blank" rel="noopener noreferrer">
+                                <button>View</button>
+                            </a>
+                        </td>
                     </tr>
                     <tr>
                         <td>4</td>
-                        <td>UI/UX Fundamentals</td>
-                        <td><button>View</button></td>
+                        <td>Diploma Certificate</td>
+                        <td>
+                            <a href="/documents/certificate.pdf" target="_blank" rel="noopener noreferrer">
+                                <button>View</button>
+                            </a>
+                        </td>
                     </tr>
                     <tr>
                         <td>5</td>
-                        <td>Node.js Essentials</td>
-                        <td><button>View</button></td>
+                        <td>Diploma Transript</td>
+                        <td>
+                            <a href="/documents/transcript.pdf" target="_blank" rel="noopener noreferrer">
+                                <button>View</button>
+                            </a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
