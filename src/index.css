@@ -427,4 +427,12 @@ display: flex;
     border-radius: 20px;
     padding: 30px;
   }
+
+  .devider__1{
+    background-color: transparent;
+  }
+
+  .devider__2{
+    background-color: transparent;
+  }
 }
