@@ -33,6 +33,11 @@
   --main-color: #00345f;
   --second-color: rgb(255, 170, 0);
   --third-color: color-mix(in srgb, var(--main-color) 30%, white);
+  --text-color: black;
+  --card-color: #4e4e4e;
+  --cardtext-color:white;
+  --table-color:white;
+  --tabletext-color:rgb(23, 23, 23);
 
   --font-size-title: 2rem;       /* For big page titles */
   --font-size-subtitle: 1.75rem;   /* For smaller section titles */
@@ -56,6 +61,19 @@ body{
   font-style: normal;
 }
 
+body.dark-mode {
+  --background-color: #23282e;
+  --main-color: #ffffff; /* light blue */
+  --second-color: #fbc02d; /* amber */
+  --third-color: color-mix(in srgb, var(--main-color) 40%, black);
+  --text-color: white;
+  --card-color: #364048;
+  --cardtext-color: #e0e0e0;
+    --table-color: #364048;
+  --tabletext-color:white;
+}
+
+
 .backgroundbox{
   background-color: var(--main-color);
   width: 30%;
@@ -63,18 +81,20 @@ body{
 }
 
 .navbar {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   padding: 60px;
   color: var(--text-color);
   z-index: 1000;
   height: 80px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar svg{
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .navbar__menu{
-  display: flex;
-  justify-content: space-between;
   width: 20rem;
   font-size: var(--font-size-navbar);
   color: var(--main-color);
@@ -85,7 +105,12 @@ body{
   border-bottom: solid 3px;
 }
 
+.navbar__current{
+  border-bottom: solid 3px;
+}
+
 .navbar__menu a{
+  margin: 20px;
   text-decoration: none;
   color: inherit;
   padding-bottom: 10px;
@@ -94,21 +119,17 @@ body{
 }
 
 .profile{
-  height: 100vh;
+  display: flex;
+ justify-content: center;
+ padding: 150px 0;
 }
 
 .profile__card{
-  height: 300px;
   width: 70%;
   position: relative;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
   border-radius: 4px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  position: absolute;
   /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
 }
 
@@ -125,7 +146,7 @@ body{
   /* border: solid 1px var(--main-color); */
 }
 
-.circle__1{
+/* .circle__1{
   background-color: rgb(200, 200, 200);
   height: 200px;
   aspect-ratio: 1/1;
@@ -144,12 +165,16 @@ body{
   position: absolute;
   right: 0;
   bottom: 0;
-}
+} */
 
 .profile__description{
   grid-column: span 2;
   padding-left: 70px;
   padding-right: 70px;
+}
+
+.cursor{
+  color: var(--second-color);
 }
 
 .profile__description button{
@@ -173,15 +198,14 @@ body{
 
 .profile__description p{
   font-size: var(--font-size-text);
-  color: black;
+  color: var(--text-color);
   font-weight: 400;
   line-height: 25px;
   text-align: justifyg;
 }
 
 .highlight{
-  color: var(--second-color);
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .profile__link{
@@ -203,7 +227,7 @@ body{
 }
 
 .profile__skill{
-  background-color: #4e4e4e;
+  background-color: var(--card-color);
   color: aliceblue;
   padding: 40px 90px;
 }
@@ -239,7 +263,7 @@ body{
 } */
 
 .profile__tools{
-  background-color: #4e4e4e;
+  background-color: var(--card-color);
   color: aliceblue;
   padding: 40px 90px;
   text-align: center;
@@ -297,7 +321,7 @@ body{
 }
 
 .profile__experience{
-  background-color: #4e4e4e;
+  background-color: var(--card-color);
   color: aliceblue;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
@@ -334,11 +358,14 @@ display: flex;
   transform: translate(-50%,-50%);
   border-collapse: collapse;
   border: none;
+  background-color: var(--table-color);
+  color: var(--tabletext-color);
+  border-radius: 4px;
 }
 
 
 .certificatelist tr{
-  border-bottom: solid white 8px;
+  border-bottom: solid rgb(50, 62, 75) 8px;
   border-radius: 20px;
 }
 
@@ -388,6 +415,64 @@ display: flex;
   transform: scale(1.025);
 }
 
+.commentForm{
+  width: 80%;
+  display: flex;
+}
+
+.commentForm {
+  width: 80%;
+  max-width: 600px;
+  color: var(--cardtext-color);
+  padding: 30px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.commentForm h2 {
+  font-size: var(--font-size-subtitle);
+  margin-bottom: 10px;
+  text-align: center;
+  color: var(--main-color);
+}
+
+.commentForm input,
+.commentForm textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: var(--font-size-text);
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: "Inter", sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+.commentForm textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.commentForm button {
+  padding: 12px;
+  background-color: var(--second-color);
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  font-size: var(--font-size-text);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.commentForm button:hover {
+  background-color: color-mix(in srgb, var(--second-color) 90%, black);
+}
 
 
 @media screen and (max-width: 1400px) {

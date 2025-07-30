@@ -18,15 +18,15 @@ function Profile() {
 
 const [text, setText] = useState("");
 const [messageIndex, setMessageIndex] = useState(0);
-const [showCursor, setShowCursor] = useState(true);
+// const [showCursor, setShowCursor] = useState(true);
 
-useEffect(() => {
-  const cursorInterval = setInterval(() => {
-    setShowCursor((prev) => !prev); // Toggle cursor
-  }, 500);
+// useEffect(() => {
+//   const cursorInterval = setInterval(() => {
+//     setShowCursor((prev) => !prev); // Toggle cursor
+//   }, 500);
 
-  return () => clearInterval(cursorInterval);
-}, []);
+//   return () => clearInterval(cursorInterval);
+// }, []);
 
 useEffect(() => {
   let isMounted = true;
@@ -65,10 +65,10 @@ useEffect(() => {
 
           <div className="profile__description">
             <div>
-              <h1 style={{minHeight: "80px"}}>{text}<span style={{ opacity: showCursor ? 1 : 0 }}>|</span></h1>
+              <h1 style={{minHeight: "80px"}}>{text}<span className='cursor'>|</span></h1>
               <br />
         <p>
-  My name is Muhammad Faiz Bin Nasiruddin, a Bachelor of Computer Science student from Universiti Selangor (UNISEL), with a current CGPA of 3.91. I am seeking an internship opportunity as a web or application developer. I'm flexible with programming languages, frameworks, and tools. I will do my best to follow the job flow and complete tasks responsibly while continuing to learn along the way. I am available to start my internship from <span className='highlight'>10 August</span>, and I am able to commit for a duration of <span className='highlight'>3–6 months</span>.
+  My name is <span className='highlight'>Muhammad Faiz Bin Nasiruddin</span>, a <span className='highlight'>Bachelor of Computer Science student</span> from Universiti Selangor (UNISEL), <span className='highlight'>with a current CGPA of 3.91</span>. I am seeking an internship opportunity as a web or application developer. I'm flexible with programming languages, frameworks, and tools. I will do my best to follow the job flow and complete tasks responsibly while continuing to learn along the way. I am available to start my internship from <span className='highlight'>10 August</span>, and I am able to commit for a duration of <span className='highlight'>3–6 months</span>.
 </p>
 
               <br />
@@ -137,9 +137,6 @@ useEffect(() => {
             <li><FaGithub /> &nbsp; GitHub</li>
             <li><SiAndroidstudio /> &nbsp; Android Studio</li>
           </ul>
-          </div>
-          <div style={{height: '200px'}}>
-
           </div>
         </div>
       </div>
